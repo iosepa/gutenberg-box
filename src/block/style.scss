@@ -1,0 +1,22 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.infoBox {
+    width: 300px;
+    height: 300px;
+    border: 3px solid grey;
+    background-color: #e0c9f9;
+    text-align: center;
+    font-size: 1em;
+    color: $black;
+    margin: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    a {
+    text-decoration: none;
+
+    }
+}
