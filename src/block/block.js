@@ -37,79 +37,73 @@ registerBlockType(
 
 		attributes,
 
-		edit(props) {
+		edit: props => {
 			const {
 				setAttributes,
 				attributes: {
 					addLink,
 					link,
-					cardTitle,
-					cardText,
-					cardTextAlignment,
-					cardHeadingSize,
-					imgID,
-					imgURL,
-					cardBtnPresent,
-					useColor,
-					colorFontControl,
-					colorBackgroundControl,
+					bodyText,
 				},
 			} = props;
 
 			return (
-				<div className="infoBox">
+				<div className="infoBox" >
 					<Inspector {...{ setAttributes, ...props }} />
+					{addLink &&
+						<a className="linkRef" href={link}></a>}
 					<RichText
 						tagName="h5"
-						value={attributes.headingText}
-						onChange={(changes) => { setAttributes({ headingText: changes }) }}
+						value={headingText}
+						onChange={headingText => setAttributes({ headingText })}
 						placeholder="enter heading here"
 					/>
 					<RichText
 						tagName="h6"
-						value={attributes.price}
-						onChange={(changes) => { setAttributes({ price: changes }) }}
 						placeholder="enter prices here"
+						value={price}
+						onChange={price => setAttributes({ price })}
 					/>
 					<RichText
 						tagName="p"
-						value={attributes.bodyText}
-						onChange={(changes) => { setAttributes({ bodyText: changes }) }}
 						placeholder="enter description here"
+						value={bodyText}
+						onChange={bodyText => setAttributes({ bodyText })}
 					/>
 				</div>
 			);
 		},
 
 
-		save(props) {
-			const { attributes } = props;
+		save: props => {
+			const {
+				attributes: {
+					addLink,
+					link,
+					bodyText,
+				},
+			} = props;
 
 			return (
-				<div className="infoBox">
-					{attributes.addLink &&
-						<a href={attributes.link}></a>}
-					<h5>{attributes.headingText}</h5>
-					<h6>{attributes.price}</h6>
-					<p>{attributes.bodyText}</p>
+				<div className="infoBox" >
+					{addLink &&
+						<a href={link}></a>}
+					<RichText.Content
+						tagName='h5'
+						value={headingText}
+					/>
+					<RichText.Content
+						tagName='h6'
+						value={price}
+					/>
+					<RichText.Content
+						tagName='p'
+						value={bodyText}
+					/>
 
-				</div>
+				</div >
 			);
 		},
 	});
 
 
-/*
-			<div className="infoBox">
-				{attributes.link === "<br>" || attributes.link === "" ?
-					<span><h5>{attributes.headingText}</h5>
-						<h6>{attributes.price}</h6>
-						<p>{attributes.bodyText}</p></span>
-
-					: <span><a href='" + attributes.link + "' >
-						<h5>{attributes.headingText}</h5>
-						<h6>{attributes.price}</h6>
-						<p>{attributes.bodyText}</p>
-					</a></span>}
-			</div>
-			*/

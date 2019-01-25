@@ -10,8 +10,15 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.info-box {
-  color: red; }
+.infoBox {
+  background-color: red; }
+  .infoBox a {
+    height: 0;
+    width: 0; }
+
+.linkRef {
+  height: 0;
+  width: 0; }
 
 h3 {
   font-size: 1rem;
