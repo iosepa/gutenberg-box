@@ -45,7 +45,7 @@ export default class Inspector extends Component {
                     />
                     {addLink &&
                         <TextControl
-                            label="Full link:"
+                            label="Link:"
                             value={link}
                             onChange={(link) => setAttributes({ link })}
                         />
