@@ -43,6 +43,8 @@ registerBlockType(
 				attributes: {
 					addLink,
 					link,
+					headingText,
+					price,
 					bodyText,
 				},
 			} = props;
@@ -51,12 +53,12 @@ registerBlockType(
 				<div className="infoBox" >
 					<Inspector {...{ setAttributes, ...props }} />
 					{addLink &&
-						<a className="linkRef" href={link}></a>}
+						<a id="linkRef" href={link}></a>}
 					<RichText
 						tagName="h5"
+						placeholder="enter heading here"
 						value={headingText}
 						onChange={headingText => setAttributes({ headingText })}
-						placeholder="enter heading here"
 					/>
 					<RichText
 						tagName="h6"
@@ -80,6 +82,8 @@ registerBlockType(
 				attributes: {
 					addLink,
 					link,
+					headingText,
+					price,
 					bodyText,
 				},
 			} = props;

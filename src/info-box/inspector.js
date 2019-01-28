@@ -36,15 +36,16 @@ export default class Inspector extends Component {
             <InspectorControls>
                 <PanelBody>
                     <CheckboxControl
-                        heading="Link to another Page"
+                        heading="Link to another page"
                         label="Include?"
                         check={addLink}
+                        checked={addLink}
                         onChange={(addLink) => setAttributes({ addLink })}
 
                     />
                     {addLink &&
                         <TextControl
-                            label="include your link"
+                            label="Full link:"
                             value={link}
                             onChange={(link) => setAttributes({ link })}
                         />

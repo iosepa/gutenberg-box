@@ -1,15 +1,14 @@
 <?php
 /**
- * Plugin Name: info-box — CGB Gutenberg Block Plugin
- * Plugin URI: https://github.com/ahmadawais/create-guten-block/
- * Description: info-box — is a Gutenberg plugin created via create-guten-block.
- * Author: mrahmadawais, maedahbatool
- * Author URI: https://AhmadAwais.com/
+ * Plugin Name: IO - Info Boxes 
+ * Plugin URI: https://github.com/iosepa/gutenberg-box
+ * Description: First include ib-align and add info-boxes to it. The info-boxes will then have a grid pattern. You can add a link to an info-box with the block settings panel on the right. 
+ * Author: Joseph Oxborrow
+ * Author URI: https:iosepa.io
  * Version: 1.0.0
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
  *
- * @package CGB
  */
 
 // Exit if accessed directly.

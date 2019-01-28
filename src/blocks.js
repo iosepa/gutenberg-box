@@ -9,4 +9,5 @@
  * Webpack is compiling as the input file.
  */
 
-import './block/block.js';
+import './info-box/block.js';
+import './ib-align/block.js';

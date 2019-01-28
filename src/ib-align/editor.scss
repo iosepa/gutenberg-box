@@ -1,0 +1,27 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.infoBox {
+  a {
+    height:0;
+    width: 0;
+  }
+}
+
+#linkRef {
+  height: 0;
+  width: 0;
+}
+
+  h3 {
+  font-size: 1rem;
+text-decoration: underline;
+
+  }
+  h4 h5 h6 {
+    text-decoration: none;
+  }
