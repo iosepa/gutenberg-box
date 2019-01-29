@@ -1,5 +1,5 @@
 # Info-box plug-in
-### Two Gutenberg blocks
+ Two Gutenberg blocks
 
 ## info-box 
 Creates box with optional link.
